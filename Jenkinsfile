@@ -7,7 +7,7 @@ pipeline{
   }
   //Docker Hub 접속
   enviroment{
-    DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
+    DOCKERHUB_CREDENTIALS=credentials('dockerCredentials')
   }
 
   stages{
