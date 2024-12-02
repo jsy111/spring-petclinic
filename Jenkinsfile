@@ -6,8 +6,8 @@ pipeline{
     maven 'M3'
   }
   //Docker Hub 접속
-  enviroment{
-    DOCKERHUB_CREDENTIALS=credentials('dockerCredentials')
+  environment{
+    DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
   }
 
   stages{
