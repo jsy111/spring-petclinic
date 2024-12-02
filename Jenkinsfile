@@ -12,23 +12,6 @@ pipeline{
         git url:'https://github.com/jsy111/spring-petclinic.git', branch:'main'
       }
     }
-    stage('Maven Build'){
-      steps{
-        
-      }
-    }
-    stage('Docker Image'){
-      steps{
-        
-      }
-    }
-    stage('Docker Image Push'){
-      steps{
-        
-      }
-    }
-    stage('SSH Publish'){
-      
-    }
+   
   }
 }
