@@ -1,6 +1,6 @@
 pipeline{
   agent any
-//JAVA와 MAVEN Tool등록
+  //JAVA와 MAVEN Tool등록
   tools{
     jdk 'jdk17'
     maven 'M3'
