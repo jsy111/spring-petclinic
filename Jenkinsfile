@@ -21,8 +21,8 @@ pipeline{
       steps{
         dir("${env.WORKSPACE}"){
           sh """
-          docker build -t JSY964/spring-petclinic:$BUILD_NUMBER .
-          docker tag JSY964/spring-petclinic:$BUILD_NUMBER JSY964/spring-petclinic:latest
+          docker build -t jsy964/spring-petclinic:$BUILD_NUMBER .
+          docker tag JSY964/spring-petclinic:$BUILD_NUMBER jsy964/spring-petclinic:latest
           """
         }
       }
