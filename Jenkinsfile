@@ -5,6 +5,11 @@ pipeline{
     jdk 'jdk17'
     maven 'M3'
   }
+  //Docker Hub 접속
+  enviroment{
+    DOCKER_CREDENTIALS = credentials('dockerCredentials')
+  }
+  
   stages{
     //GitHub에서 jenkins로 소스코드 복제
     stage('Git Clone'){
@@ -26,6 +31,12 @@ pipeline{
           """
         }
       }
+    }
+    stage('Docker Image Push'){
+      sh"""
+      echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
+      docker push jsy964/spring-petclinic:latest
+      """
     }
   }
 }
