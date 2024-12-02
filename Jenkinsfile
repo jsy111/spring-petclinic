@@ -9,7 +9,7 @@ pipeline{
   enviroment{
     DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
   }
-  
+
   stages{
     //GitHub에서 jenkins로 소스코드 복제
     stage('Git Clone'){
