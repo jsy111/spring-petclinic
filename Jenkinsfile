@@ -19,7 +19,7 @@ pipeline{
       steps{
         echo 'Git Clone'
         git url: 'https://github.com/jsy111/spring-petclinic.git'
-          branch: 'main'//, credentialsId: 'GIT_CREDENTIALS'
+          branch: 'main'
       }
     }
   }
