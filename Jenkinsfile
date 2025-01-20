@@ -50,8 +50,8 @@ pipeline{
         """
         }
       }
-    }
-    //Docker Image 삭제 
+
+ //Docker Image 삭제 
      stage('Remove Docker Image'){
       steps{
         sh """
@@ -62,5 +62,9 @@ pipeline{
       }
     }
 
+
+    
+}
+   
     
 
